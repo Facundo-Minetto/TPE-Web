@@ -1,0 +1,24 @@
+<?php require ('templates/header.phtml');?>
+
+<div class="container-cards">
+
+    <?php foreach ($products as $product) : ?>
+        <div class="card">
+            <div class="card-img">
+                <img src="" alt="">
+            </div>
+            <div class="card-info">
+                <div class="card-description">
+                    <p class="card-productName"><?=$product->nombre_producto?></p>
+                    <p class="cardCategory"></p>
+                </div>
+                <hr class="card-divider">
+                <div class="card-footer">
+                    <p class="card-price">$<?=$product->precio?></p>
+                </div>
+            </div>
+        </div>
+    <?php endforeach ?>
+</div>
+
+<?php require ('templates/footer.phtml');?>
