@@ -12,14 +12,22 @@ class TaskController {
         
     }
     public function homeController(){
-        require 'templates/header.phtml';
-        require 'templates/footer.phtml';
+        $this->view->viewHome();
     }
     public function errorController(){
         $this->view->showError();
     }
     public function showProducts(){
-        $productos = $this->model->getProducts();
-        $this->view->showProducts($productos);
+        $products = $this->model->getProducts();
+        $categorys = $this->model->getCategorys();
+        $this->view->showProducts($products, $categorys);
+    }
+    public function showCategorys(){
+        $categorys = $this->model->getCategorys();
+        $this->view->viewCategorys($categorys);
+    }
+    public function showProductsByCategory($id){
+        $products = $this->model->getProductsByCategory($id);
+        $this->view->viewProductsByCategory($products);
     }
 }

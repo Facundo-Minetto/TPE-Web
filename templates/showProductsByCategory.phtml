@@ -1,0 +1,20 @@
+<div class="container-cards">
+        <?php foreach ($products as $product) : ?>
+            <div class="card">
+                <div class="card-img">
+                    <img src="img/<?= $product->nombre_producto ?>.jpg" alt="<?= $product->nombre_producto ?>" style="width:300px; height:300px;">
+                </div>
+                <div class="card-info">
+                    <div class="card-description">
+                        <p class="card-productName"><?= $product->nombre_producto ?></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-price">$<?= $product->precio ?></p>
+                        <button class="btn btn-primary">Comprar</button>
+
+                    </div>
+
+                </div>
+            </div>
+        <?php endforeach ?>
+    </div>

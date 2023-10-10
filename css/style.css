@@ -1,0 +1,24 @@
+/*-----header------*/
+.navbar-brand{
+    text-transform: uppercase;
+}
+.nav-link{
+    text-transform: uppercase;
+}
+/*-----footer------*/
+.text-muted{
+    text-transform: uppercase;
+}
+
+.card{
+    height: 480px;
+    width: 380px;
+    text-align: center;
+    margin: 20px;
+}
+.container-cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}

@@ -24,7 +24,16 @@ switch ($params[0]) {
         break;
     case 'productos':
         $controller = new TaskController();
-        $controller->showProducts();
+        $controller->showCategorys();
+        if($params[1] == 0){
+            $controller->showProducts();
+        }
+        else if($params[1] >= 1 && $params[1] <= 6){
+            $controller->showProductsByCategory($params[1]);
+        }
+        else{
+            $controller->errorController();
+        }
         break;
     default: 
         $controller = new TaskController();

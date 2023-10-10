@@ -1,0 +1,12 @@
+<ul class="list-group">
+    <li class="list-group-item">
+        <a href="productos/0">Todos</a>
+    </li>
+    <?php foreach ($categorys as $category) :
+        if ($category->id_categoria) : ?>
+            <li class="list-group-item item-task">
+                <a href="productos/<?= $category->id_categoria?>"><?php echo $category->nombre ?></a>
+            </li>
+        <?php endif ?>
+    <?php endforeach ?>
+</ul>
