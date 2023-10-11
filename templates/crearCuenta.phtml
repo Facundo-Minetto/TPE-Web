@@ -1,0 +1,17 @@
+<?php require 'templates/header.phtml';?>
+<main class="main-form__inicioSesion">
+    <form action="crearCuenta" method="POST" class="form-inicioSesion">
+        <p class="form-inicioSesion__title">Crear cuenta</p>
+        <div class="form-inicioSesion__input--container">
+            <input name="email_user"  placeholder="   Email">
+        </div>
+        <div class="form-inicioSesion__input--container">
+            <input required name="password" type="password" placeholder="    Contraseña">
+        </div>
+        <button type="submit" class="form-inicioSesion__submit">
+            Crear
+        </button>
+        
+    </form>
+</main>
+<?php require 'templates/footer.phtml';?>

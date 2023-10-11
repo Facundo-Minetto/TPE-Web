@@ -1,5 +1,6 @@
 <?php
 require_once './app/controllers/product.controller.php';
+require_once './app/controllers/authController.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
@@ -28,7 +29,7 @@ switch ($params[0]) {
         if($params[1] == 0){
             $controller->showProducts();
         }
-        else if($params[1] >= 1 && $params[1] <= 6){
+        else if($params[1] >= 1 && $params[1] <= 3){
             $controller->showProductsByCategory($params[1]);
         }
         else{
@@ -38,5 +39,9 @@ switch ($params[0]) {
     default: 
         $controller = new TaskController();
         $controller->errorController();
+        break;
+    case 'registro':
+        $controller = new authController();
+        $controller->showCrearCuenta();
         break;
 }
