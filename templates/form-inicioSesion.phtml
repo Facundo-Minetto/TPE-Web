@@ -1,0 +1,24 @@
+<?php require 'templates/header.phtml'; ?>
+<main class="main-form__inicioSesion">
+    <form action="ingreso" method="POST" class="form">
+        
+        <p class="form-title">Ingrese a su cuenta</p>
+
+        <div class="form-input__container">
+            <input name="email_user" placeholder="   Email">
+        </div>
+
+        <div class="form-input__container">
+            <input required name="password" type="password" placeholder="    Contraseña">
+        </div>
+
+        
+
+        <button type="submit" class="form-submit">
+            Ingresar
+        </button>
+        <!-- <a href="registro">No tienes una cuenta? crea una cuenta.</a> -->
+        <a href="logout">Deslogearse.</a>
+    </form>
+</main>
+<?php require 'templates/footer.phtml'; ?>

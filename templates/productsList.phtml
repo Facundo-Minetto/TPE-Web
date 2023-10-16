@@ -1,7 +1,17 @@
-<div class="container-cards">
+<div class="contenedorLista">
+    <ul class="list-categorys">
+        <li class="categorias-productos btn btn-primary" id="0">Todos</li> <!-- no tocar la clase categorias-productos -->
+        <?php foreach ($categorys as $category) :
+            if ($category->id_categoria) : ?>
+                <li class="categorias-productos btn btn-primary" id="<?php echo $category->id_categoria ?>"><?php echo $category->nombre?></li> <!-- no tocar la clase categorias-productos -->
+            <?php endif ?>
+        <?php endforeach ?>
+    </ul>
+</div>
 
+<div class="container-cards">
     <?php foreach ($products as $product) : ?>
-        <div class="card">
+        <div class="card"  categoryID="<?= $product->id_categoria ?>"> <!-- no tocar la clase card -->
             <div class="card-header">
                 <?php
                 $i = 0;
@@ -16,14 +26,17 @@
                 } ?>
             </div>
             <div class="card-img">
-                <img class="img-card" src="img/<?=$product->nombre_producto?>.jpg" alt="<?= $product->nombre_producto ?>" style="width:300px; height:300px;">
+                <img class="img-product" src="img/<?= $product->nombre_producto ?>.jpg" alt="<?= $product->nombre_producto ?>">
             </div>
-            <div class="card-body">
-                <h5 class="card-price">$<?=$product->precio?></h5>
-                <h5 class="card-title"><?=$product->nombre_producto?></h5>
-                <button class="btn btn-primary">Comprar</button>
+            <div class="card-info">
+                <div class="card-description">
+                    <p class="card-productName"><?= $product->nombre_producto ?></p>
+                    <p class="card-price">$<?= $product->precio ?></p>
+                    <button class="btn btn-primary">Comprar</button>
+                </div>
             </div>
         </div>
     <?php endforeach ?>
 </div>
-<?php require('templates/footer.phtml'); ?>
+
+<script src="js/productos.js"></script>

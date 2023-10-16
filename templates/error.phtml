@@ -1,7 +1,12 @@
-<?php require 'templates/header.phtml' ?>
-
-<div class='alert alert-danger' role='alert'>
-    <?= $error ?>
-</div> 
-
-<?php require 'templates/footer.phtml' ?>
+<?php require 'templates/header.phtml'?>
+<main class='main-errorPage'>
+    <div class="errorPage-container">
+        <p class="errorPage-container__number">404</p>
+    </div>
+    <div class="errorPage-container errorPage-info">
+        <p class="errorPage-container__title">Oops!</p>
+        <p class="errorPage-container__description">La pagina que esta buscando no pudo ser encontrada.</p>
+        <a href="home">Ir al Homepage <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+</main>
+<?php require 'templates/footer.phtml'?>

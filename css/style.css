@@ -22,3 +22,24 @@
     flex-direction: row;
     width: 100%;
 }
+
+.noMostrar{
+    display: none;
+}
+.img-product{
+    object-fit: contain ;
+    height: 300px;
+    width: 300px;
+}
+.categorias-productos{
+    list-style-type: none;
+    cursor: pointer;
+    border: 1px solid black;
+    text-align: center;
+}
+.contenedorLista{
+    text-align: center;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

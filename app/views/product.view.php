@@ -5,6 +5,7 @@ class TaskView {
         require 'templates/error.phtml';
     }
     public function showProducts($products, $categorys){
+        require 'templates/header.phtml';
         require 'templates/productsList.phtml';
     }
     public function viewCategorys($categorys){
