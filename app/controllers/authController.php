@@ -20,15 +20,17 @@ class authController {
         $password = $_POST['password'];
 
         if(empty($email_user) || empty($password)){
-            $this->view->showError("Complete los campos solicitados");
+            $this->view->viewInicioSesion("Complete los campos solicitados");
             return;
         }
+        
+        //busco el usuario 
         $usuario=$this->model->getEmail($email_user);
 
         if($usuario && $password){
             authHelper::login($usuario);
 
-            header('Location: ' . 'home');
+            header('Location: ' . 'administrar');
         }
         else{
             $this->view->viewInicioSesion("Los datos son erroneos");

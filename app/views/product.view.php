@@ -1,23 +1,20 @@
 <?php
 
-class TaskView {
+class productView {
     public function showError() {
         require 'templates/error.phtml';
     }
     public function showProducts($products, $categorys){
         require 'templates/header.phtml';
-        require 'templates/productsList.phtml';
-    }
-    public function viewCategorys($categorys){
-        require 'templates/header.phtml';
-        require 'templates/viewCategorys.phtml';
-    }
-    public function viewProductsByCategory($products){
-        require 'templates/showProductsByCategory.phtml';
-        require 'templates/footer.phtml';
+        require 'templates/products.phtml';
     }
     public function viewHome(){
         require 'templates/header.phtml';
+        require 'templates/footer.phtml';
+    }
+    public function viewAdministrar($products, $categorys){
+        require 'templates/header.phtml';
+        require 'templates/adminProducts.phtml';
         require 'templates/footer.phtml';
     }
 }

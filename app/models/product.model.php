@@ -1,6 +1,6 @@
 <?php
 
-class TaskModel {
+class productModel {
     private $db;
 
     public function __construct() {

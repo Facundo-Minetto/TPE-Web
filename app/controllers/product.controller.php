@@ -2,13 +2,13 @@
 require_once './app/models/product.model.php';
 require_once './app/views/product.view.php';
 
-class TaskController {
+class productController {
     private $model;
     private $view;
 
     public function __construct() {
-        $this->model = new TaskModel();
-        $this->view = new TaskView();
+        $this->model = new productModel();
+        $this->view = new productView();
         
     }
     public function homeController(){
@@ -21,13 +21,5 @@ class TaskController {
         $products = $this->model->getProducts();
         $categorys = $this->model->getCategorys();
         $this->view->showProducts($products, $categorys);
-    }
-    public function showCategorys(){
-        $categorys = $this->model->getCategorys();
-        $this->view->viewCategorys($categorys);
-    }
-    public function showProductsByCategory($id){
-        $products = $this->model->getProductsByCategory($id);
-        $this->view->viewProductsByCategory($products);
     }
 }
