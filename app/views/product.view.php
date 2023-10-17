@@ -13,7 +13,6 @@ class productView {
         require 'templates/footer.phtml';
     }
     public function viewAdministrar($products, $categorys){
-        require 'templates/header.phtml';
         require 'templates/adminProducts.phtml';
         require 'templates/footer.phtml';
     }
