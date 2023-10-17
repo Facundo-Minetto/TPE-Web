@@ -1,11 +1,7 @@
 <?php
-
-class productModel {
-    private $db;
-
-    public function __construct() {
-        $this->db = new PDO('mysql:host=localhost;dbname=tpeweb;charset=utf8', 'root', '');
-    }
+require_once 'model.php';
+class productModel extends Model {
+    
     public function getProducts() {
         $query = $this->db->prepare('SELECT * FROM products');
         $query->execute();

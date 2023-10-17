@@ -8,3 +8,9 @@ class authView{
         require 'templates/error.phtml';
     }
 }
+
+// este codigo se utilizo para crear el registro del usuario webadmin
+
+// public function viewCrearCuenta(){
+//     require 'templates/crearCuenta.phtml';
+// }

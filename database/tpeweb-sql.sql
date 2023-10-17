@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2023 a las 20:31:32
+-- Tiempo de generación: 17-10-2023 a las 22:31:41
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -63,30 +63,24 @@ INSERT INTO `products` (`id_producto`, `nombre_producto`, `precio`, `id_categori
 (2, 'Pantalon Levi\'s', 22999, 3),
 (3, 'Hoodie Nike Air Jordan', 30000, 1),
 (4, 'Remera Nike Basic', 15000, 2),
-(5, 'Hoodie Supreme ', 40000, 1),
 (7, 'Remera Adidas Originals', 15000, 2),
 (8, 'Hoodie Nike Jumpman', 35000, 1),
 (9, 'Hoodie Fear Of God', 40000, 1),
 (10, 'Pantalon Fear Of God', 20000, 3),
 (11, 'Remera Jordan Flight MVP', 20000, 2),
 (12, 'Pantalon Jordan Flight MVP', 22000, 3),
-(13, 'Remera Palm Angels', 20000, 2),
 (14, 'Pantalon Cargo Nike', 20000, 3),
 (15, 'Pantalon Cargo KOTK', 20000, 3),
 (16, 'Remera Nike Dri-Fit', 18000, 2),
-(17, 'Hoodie ACG ', 35000, 1),
 (18, 'Hoodie Vans', 25000, 1),
 (19, 'Remera Jordan The Shoes', 20000, 2),
 (20, 'Pantalon Cargo Adidas', 20000, 3),
 (21, 'Pantalon Recto Zara', 20000, 3),
 (22, 'Remera Zara Basics', 15000, 2),
 (23, 'Hoodie The North Face', 40000, 1),
-(24, 'Pantalon H&M ', 20000, 3),
-(25, 'Hoodie Champion ', 30, 1),
-(26, 'Pantalon Air Jordan', 20000, 3),
-(27, 'Remera Nike Just Do It', 15000, 2),
 (28, 'Remera Nike Sportswear All Nike', 20000, 2),
-(29, 'Remera Nike Sportswear Max90', 20000, 2);
+(29, 'Remera Nike Sportswear Max90', 20000, 2),
+(30, 'Remera BMW x PUMA', 25000, 2);
 
 -- --------------------------------------------------------
 
@@ -99,6 +93,13 @@ CREATE TABLE `usuarios` (
   `usuario` varchar(200) NOT NULL,
   `contraseña` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `usuario`, `contraseña`) VALUES
+(2, 'webadmin', '$2y$10$3Kbqmf86cgTwGGUN6YHmBuld0hZtyoPdbyEPU8BHbJ8Y0M9VfZmdS');
 
 --
 -- Índices para tablas volcadas
@@ -131,19 +132,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `categorys`
 --
 ALTER TABLE `categorys`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas

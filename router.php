@@ -68,8 +68,19 @@ switch ($params[0]) {
         $controller = new adminController();
         $controller->removeCategory();
         break;
-    default:
+        default:
         $controller = new productController();
         $controller->errorController();
         break;
-}
+    }
+    
+    // este codigo se utilizo para crear el registro del usuario webadmin
+
+    // case 'registro':
+    //     $controller = new authController();
+    //     $controller->showCrearCuenta();
+    //     break;
+    // case 'crearCuenta':
+    //     $controller = new authController();
+    //     $controller->createUser();
+    //     break;

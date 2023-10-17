@@ -27,7 +27,7 @@ class authController {
         //busco el usuario 
         $usuario=$this->model->getEmail($email_user);
 
-        if($usuario && $password){
+        if($usuario && password_verify($password, $usuario->contraseña)){
             authHelper::login($usuario);
 
             header('Location: ' . 'administrar');
@@ -40,4 +40,21 @@ class authController {
         AuthHelper::logout();
         header('Location: ' . BASE_URL); 
     }
+
 }
+
+// este codigo se utilizo para crear el registro del usuario webadmin
+
+// public function showCrearCuenta(){
+//     $this->view->viewCrearCuenta();
+// }
+// public function createUser(){
+//     $email_register= $_POST['email_register'];
+//     $contraseña = password_hash($_POST['contraseña'], PASSWORD_BCRYPT);
+//     $this->model->addUser($email_register, $contraseña);
+
+//     if(!empty($email_user)||!empty($password)){
+
+//         $this->view->viewInicioSesion();
+//     }
+// }
